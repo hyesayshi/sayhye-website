@@ -1,0 +1,9 @@
+{% if include.video-id %}
+
+<div class="video">
+	<div class='embed-container'>
+		<iframe src="//player.vimeo.com/video/{{ include.video-id }}?title=0&amp;byline=0&amp;portrait=0" width="640" height="432" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+</div>
+
+{% endif %}

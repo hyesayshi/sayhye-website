@@ -1,0 +1,19 @@
+<script>
+
+$(window).load(function() {
+	// Initialize Masonry
+	var $container = $('#masonry-container').masonry({
+		columnWidth: 200,
+		itemSelector: '.masonry-item',
+		transitionDuration: 0,
+		"isFitWidth": true,
+		gutter: 60,
+		isAnimated: Modernizr.csstransitions
+	});
+
+	$container.imagesLoaded(function() {
+		$('masonry-container').masonry('reload');
+	});
+});
+
+</script>
