@@ -179,6 +179,8 @@ const PostListItemDraggable = props => {
                 to="/"
                 state={{ disableScrollUpdate: true }}
                 draggable={false}
+                aria-label="close"
+                
                 style={{
                   // outline: `1px solid blue`,
                   margin: `auto 0 auto 12px`,

@@ -9,7 +9,7 @@ import "@fontsource/manrope/700.css"
 /**
  * > Style
  * break points (min 280px, 320px, 768px, 1024px)
- * 
+ *
  * > global inline style is ugly but i needed to pass props, but couldn't make it work as a separate const.
  */
 
@@ -24,7 +24,10 @@ const Layout = props => {
   const post = props.data && props.data.markdownRemark
   const frontmatter = post && post.frontmatter
 
-  const defaultBackground = props.data && props.data.site ? props.data.site.siteMetadata.defaultBackground : `#aaf0d1`
+  const defaultBackground =
+    props.data && props.data.site
+      ? props.data.site.siteMetadata.defaultBackground
+      : `#aaf0d1`
 
   const menuText =
     frontmatter && frontmatter.menuText ? frontmatter.menuText : "black"
@@ -88,7 +91,7 @@ const Layout = props => {
         menuBackground={menuBackground}
       />
       <Header menuText={menuText} />
-      {path !== "/about/" && (
+      {path !== "/about/" && path !== "/license/" && (
         <PostList
           menuText={menuText}
           menuBackground={menuBackground}

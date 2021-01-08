@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import SEO from "../components/seo"
@@ -113,24 +113,7 @@ const AboutPage = props => {
             </a>
           </li>
           <li>
-            Icons from{" "}
-            <a
-              css={extLinkStyle}
-              href="https://fontawesome.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              FontAwesome
-            </a>{" "}
-            and{" "}
-            <a
-              css={extLinkStyle}
-              href="https://github.com/astrit/css.gg"
-              target="_blank"
-              rel="noreferrer"
-            >
-              css.gg
-            </a>
+            <Link to="/license/">Copyrights & License Notices</Link>
           </li>
         </ul>
       </section>
