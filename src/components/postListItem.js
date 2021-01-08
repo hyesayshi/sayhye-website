@@ -103,15 +103,15 @@ const closeCSS = css`
 const PostListItemDraggable = props => {
   const { node, index, canDrag, menuText, menuBackground } = props
 
-  const [pos, setPos] = useState({ x: null, y: null })
-  // const [angle, setAngle] = useState(0)
-  const [zIndex, setZIndex] = useState(0)
-  const [animatable, setAnimatable] = useState(true) // apply transition or not. (set false when dragging)
-
-  // because of pos null at start, some listItems flash, this is a temporary solution.
+  // because of pos null at start, some listItems flash in Safari, this is a temporary solution.
+  const [pos, setPos] = useState({ x: 0, y: 0 })
   useLayoutEffect(() => {
     setPos({ x: 0, y: 0 })
   }, [])
+
+  // const [angle, setAngle] = useState(0)
+  const [zIndex, setZIndex] = useState(0)
+  const [animatable, setAnimatable] = useState(true) // apply transition or not. (set false when dragging)
 
   useEffect(() => {
     // when page is loaded and after closed,
