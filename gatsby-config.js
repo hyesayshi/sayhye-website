@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  pathPrefix: `/sayhye`,
+  pathPrefix: `/sayhye`, // for local dev only
   siteMetadata: {
     title: "SAY HYE",
     titleTemplate: "",
