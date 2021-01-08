@@ -7,7 +7,7 @@ tags:
 - illustration
 thumbnail: ./01.jpg
 menuBackground: "#f17995"
-menuText: rgb(246, 130, 31)
+menuText: "white"
 cardBorder: black
 cardBackground: white
 cardText: black

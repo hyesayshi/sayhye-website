@@ -1,6 +1,6 @@
 ---
 title: Card Drawings 1
-date: 2020-07-03
+date: 2020-07-02
 tags:
 - card
 - print
