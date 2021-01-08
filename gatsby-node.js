@@ -6,7 +6,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === "MarkdownRemark") {
     const slug = createFilePath({ node, getNode })
-    console.log(slug)
+    // console.log(slug)
     // console.log(slug.replace(/^\/|\/$/g, "")) // remove first/last slahes
     // console.log(slug.replace(/\/$/g, "")) // remove trailing(last) slash
 
