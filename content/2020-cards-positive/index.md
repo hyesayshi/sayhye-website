@@ -1,6 +1,7 @@
 ---
 title: Cards with positive messages
 date: 2020-07-02
+published: true
 tags:
 - card
 - print

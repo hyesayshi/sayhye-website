@@ -1,6 +1,7 @@
 ---
 title: Halloween
 date: 2020-10-30
+published: true
 tags:
 - card
 - print
