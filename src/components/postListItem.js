@@ -114,8 +114,9 @@ const PostListItemDraggable = props => {
   }, [])
 
   useEffect(() => {
-    // when page is loaded
+    // when page is loaded and after closed,
     // reset transformation
+    setPos({ x: 0, y: 0 })
     if (canDrag) {
       setZIndex(1)
       // setAngle(10)

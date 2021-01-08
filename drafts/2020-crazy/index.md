@@ -1,12 +1,12 @@
 ---
-title: Cards with positive messages
+title: Crazy
 date: 2020-07-02
 tags:
 - card
 - print
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#f6c2c5"
+menuBackground: "#fff872"
 menuText: black
 cardBorder: black
 cardBackground: black

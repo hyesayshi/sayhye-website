@@ -1,12 +1,12 @@
 ---
-title: Cards with not so positive messages
+title: Celebrations
 date: 2020-07-02
 tags:
 - card
 - print
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#fff872"
+menuBackground: "#f6c2c5"
 menuText: black
 cardBorder: black
 cardBackground: black

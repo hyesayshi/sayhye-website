@@ -104,7 +104,7 @@ const TagItem = styled.li`
 const Card = props => {
   //---------- props
   const img = props.node // regular img card
-  const isGif = img && img.childImageSharp ? false : true // gif card
+  const isGif = img && img.childImageSharp ? false : true //------- gif or mp4
   const isDesc = img ? false : true // description card
 
   // console.log({ isGIF })
@@ -234,8 +234,11 @@ const Card = props => {
     setScale(0.8) // normal scale
   }
   const onGifLoad = ({ target: img }) => {
-    console.log("gif loaded")
     setGifSize({ w: img.naturalWidth, h: img.naturalHeight })
+    setGifOpacity(1)
+  }
+  const onVideoLoad = ({ target: video }) => {
+    setGifSize({ w: video.videoWidth, h: video.videoHeight })
     setGifOpacity(1)
   }
 
@@ -283,7 +286,7 @@ const Card = props => {
             )}
 
             {/* gif image */}
-            {img && !img.childImageSharp && (
+            {img && !img.childImageSharp && img.extension === "gif" && (
               <img
                 src={img.publicURL}
                 onLoad={onGifLoad}
@@ -298,8 +301,21 @@ const Card = props => {
               />
             )}
 
+            {/* mp4 video */}
+            {img && !img.childImageSharp && img.extension === "mp4" && (
+              <video
+                src={img.publicURL}
+                onLoadedMetadata={onVideoLoad}
+                style={{ width: `100%` }}
+                draggable={false}
+                autoPlay
+                loop
+                muted
+              />
+            )}
+
             {/* description card */}
-            {post && (
+            {post && isDesc && (
               <Post maxSize={maxSize}>
                 <header>
                   <h1>{post.frontmatter.title}</h1>

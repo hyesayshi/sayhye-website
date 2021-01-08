@@ -49,6 +49,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         id
+        extension
         publicURL
         name
         childImageSharp {
