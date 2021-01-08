@@ -42,7 +42,7 @@ export const pageQuery = graphql`
     }
     allFile(
       filter: {
-        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)|(mp4)/" }
         relativeDirectory: { eq: $slugNoSlash }
       }
       sort: { fields: name, order: DESC }

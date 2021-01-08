@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-module.exports = {
+const cfg = {
   pathPrefix: `/sayhye`, // for local dev only
   siteMetadata: {
     title: "SAY HYE",
@@ -58,5 +58,28 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Manrope"],
+        },
+      },
+    },
   ],
 }
+
+// https://www.chaseadams.io/posts/gatsby-drafts/
+if (process.env.CONTEXT !== "production") {
+  console.log("----------Development mode: adding drafts to preview.")
+  const draftsCfg = {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `drafts`,
+      path: `${__dirname}/drafts`,
+    },
+  }
+  cfg.plugins.push(draftsCfg)
+}
+
+module.exports = cfg

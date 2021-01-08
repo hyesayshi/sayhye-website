@@ -167,7 +167,7 @@ const Card = props => {
     setMaxSize(maxSize)
     setW(w)
     setH(h)
-  }, [windowWidth, windowHeight, img, gifSize.w, gifSize.h])
+  }, [windowWidth, windowHeight, img, gifSize.w, gifSize.h, isDesc, isGif])
 
   //---------- angle for spread (for more optimization, move thiw to cardTable)
   const [initialAngle, setInitialAngle] = useState(null)
@@ -290,7 +290,7 @@ const Card = props => {
                 style={{
                   width: `100%`,
                   // objectFit: `cover`,
-                  // opacity: gifOpacity,
+                  opacity: gifOpacity,
                   transition: `opacity 0.2s`,
                 }}
                 draggable={false}
