@@ -52,7 +52,7 @@ export const pageQuery = graphql`
         publicURL
         name
         childImageSharp {
-          fluid(maxWidth: 1400, quality: 60) {
+          fluid(maxWidth: 1400, quality: 50) {
             aspectRatio
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }

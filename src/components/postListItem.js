@@ -76,7 +76,7 @@ const ListItemBox = styled.div`
   ${({ animatable }) =>
     animatable &&
     css`
-      transition: transform 0.2s; //----- return back transition
+      transition: transform 0.2s; //----- return back rotate transition
     `}
 
   &:hover {
@@ -150,7 +150,7 @@ const PostListItemDraggable = props => {
         style={{
           position: `relative`,
           zIndex: zIndex,
-          transition: animatable ? `transform 0.3s` : `none`,
+          transition: animatable ? `transform 0.6s` : `none`,
         }}
       >
         <ListItemBox

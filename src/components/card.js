@@ -83,6 +83,7 @@ const Post = styled.div`
   }
   ul {
     // margin: 4rem 2rem;
+    margin: 3% 0;
   }
   li {
     margin-right: 4px;
@@ -96,7 +97,7 @@ const TagItem = styled.li`
     padding: 0 ${maxSize * 0.03}px;
     border-radius: ${maxSize * 0.05}px;
     border: ${maxSize * 0.004}px solid ${cardText};
-    font-size: ${maxSize * 0.03}px;
+    font-size: ${maxSize * 0.04}px;
   `}
 `
 

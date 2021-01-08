@@ -5,9 +5,9 @@ tags:
 - lettering
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#ff81d2"
+menuBackground: rgb(215,140,120)
 menuText: black
 cardBorder: black
-cardBackground: white
-cardText: black
+cardBackground: black
+cardText: white
 ---
