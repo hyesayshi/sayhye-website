@@ -1,5 +1,5 @@
 ---
-title: Cyber Halloween
+title: Halloween
 date: 2020-10-30
 tags:
 - card
@@ -12,5 +12,3 @@ cardBorder: black
 cardBackground: black
 cardText: white
 ---
-
-Cyber Halloween
