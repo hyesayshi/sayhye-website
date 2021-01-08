@@ -6,8 +6,8 @@ tags:
 - print
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#ffccee"
-menuText: rgb(127, 200, 240)
+menuBackground: rgb(230,120,200)
+menuText: black
 cardBorder: black
 cardBackground: black
 cardText: white

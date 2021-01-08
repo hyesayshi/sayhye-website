@@ -3,12 +3,12 @@ title: Yiyagi Zine
 date: 2016-01-23
 tags:
 - zine
-- pattern design
+- pattern
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#effa11"
+menuBackground: rgb(110,180,150)
 menuText: black
-cardBorder: magenta
-cardBackground: black
-cardText: magenta
+cardBorder: rgb(228,115,160)
+cardBackground: rgb(228,115,160)
+cardText: white
 ---

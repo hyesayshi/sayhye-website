@@ -6,10 +6,10 @@ tags:
 - print
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#d1acac"
-menuText: rgb(127, 200, 240)
+menuBackground: "#ccc"
+menuText: black
 cardBorder: black
-cardBackground: black
+cardBackground: "#333"
 cardText: white
 ---
 
