@@ -1,12 +1,12 @@
 ---
-title: Quarantine
-date: 2020-05-02
+title: Fruits & Animals
+date: 2020-07-05
 tags:
-- card
+- pattern
 - print
 - illustration
 thumbnail: ./01.jpg
-menuBackground: "#f6c2c5"
+menuBackground: rgb(145,125,250)
 menuText: black
 cardBorder: black
 cardBackground: black
