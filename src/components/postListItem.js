@@ -90,9 +90,7 @@ const handCSS = css`
 `
 const closeCSS = css`
   // outline: 1px solid red;
-  // margin: auto 8px auto 18px;
-
-  // position: relative;
+  margin: 0 2px 0 0; // quick fix to avoid layout shifting (close svg width is narrower)
 
   transform: scale(1);
   left: 0 !important; //----- prevent left transition

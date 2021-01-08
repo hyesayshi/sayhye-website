@@ -24,7 +24,7 @@ const Nav = styled.nav`
 
   ${({ menuBackground }) => css`background: ${menuBackground};`}
 
-  // transition: background 10s; //----------- bg transition
+  // transition: background 0.3s; //----------- bg transition. performance issue.
 `
 // const StyledCloseButton = styled(CgCloseO)`
 //   position: fixed;

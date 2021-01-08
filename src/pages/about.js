@@ -57,9 +57,12 @@ const creditStyle = css`
     font-size: 1.4rem;
     margin: 4px 0;
   }
-`
-const extLinkStyle = css`
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 `
 const AboutPage = props => {
   // console.log(props)
@@ -102,9 +105,8 @@ const AboutPage = props => {
         <h3>Credits</h3>
         <ul>
           <li>
-            website design by{" "}
+            Web dev by{" "}
             <a
-              css={extLinkStyle}
               href="https://paperdove.com"
               target="_blank"
               rel="noreferrer"
