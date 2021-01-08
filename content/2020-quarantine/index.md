@@ -1,6 +1,6 @@
 ---
-title: Card Drawings 1
-date: 2020-07-02
+title: Quarantine
+date: 2020-05-02
 tags:
 - card
 - print
