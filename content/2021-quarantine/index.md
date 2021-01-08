@@ -1,12 +1,12 @@
 ---
-title: Patterns & Illustrations
-date: 2020-07-05
+title: Quarantine
+date: 2021-01-01
 tags:
-- pattern
+- card
 - print
 - illustration
 thumbnail: ./01.jpg
-menuBackground: rgb(145,125,250)
+menuBackground: "#f6c2c5"
 menuText: black
 cardBorder: black
 cardBackground: black

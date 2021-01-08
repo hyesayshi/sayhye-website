@@ -5,7 +5,7 @@ tags:
 - card
 - print
 - illustration
-thumbnail: ./01.jpg
+thumbnail: ./01-goodluck.jpg
 menuBackground: "#5299c6"
 menuText: black
 cardBorder: black
