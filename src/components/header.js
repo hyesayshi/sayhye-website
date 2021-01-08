@@ -25,7 +25,6 @@ const headerCSS = css`
   justify-content: space-between;
   align-items: center;
 
-  font-family: Manrope, sans-serif;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.5px;

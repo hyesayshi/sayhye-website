@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useLayoutEffect } from "react"
 import { Link } from "gatsby"
 import Draggable from "react-draggable"
 import { css } from "@emotion/react"
@@ -25,7 +25,6 @@ const ListItemBox = styled.div`
   white-space: nowrap;
   overflow: hidden;
 
-  font-weight: 400;
   font-size: 2.4rem;
   line-height: 1.4;
 
@@ -62,7 +61,6 @@ const ListItemBox = styled.div`
     props.canDrag &&
     css`
       font-style: italic;
-      // font-weight: 700;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       background: ${props.menuText}; //----- invert color
       transform: rotate(-3deg);
@@ -112,10 +110,14 @@ const PostListItemDraggable = props => {
   const [zIndex, setZIndex] = useState(0)
   const [animatable, setAnimatable] = useState(true) // apply transition or not. (set false when dragging)
 
+  // because of pos null at start, some listItems flash, this is a temporary solution.
+  useLayoutEffect(() => {
+    setPos({ x: 0, y: 0 })
+  }, [])
+
   useEffect(() => {
     // when page is loaded
     // reset transformation
-    setPos({ x: 0, y: 0 })
     if (canDrag) {
       setZIndex(1)
       // setAngle(10)
@@ -180,7 +182,6 @@ const PostListItemDraggable = props => {
                 state={{ disableScrollUpdate: true }}
                 draggable={false}
                 aria-label="close"
-                
                 style={{
                   // outline: `1px solid blue`,
                   margin: `auto 0 auto 12px`,
