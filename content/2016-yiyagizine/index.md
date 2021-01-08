@@ -1,7 +1,6 @@
 ---
 title: Yiyagi Zine
 date: 2016-01-23
-published: true
 tags:
 - zine
 - pattern

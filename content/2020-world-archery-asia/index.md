@@ -1,7 +1,6 @@
 ---
 title: World Archery Asia
 date: 2020-12-23
-published: false
 tags:
 - card
 - greeting

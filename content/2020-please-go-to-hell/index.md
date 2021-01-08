@@ -1,7 +1,6 @@
 ---
 title: Please Go to Hell
 date: 2020-11-20
-published: true
 tags:
 - card
 - print

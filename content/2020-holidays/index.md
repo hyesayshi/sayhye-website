@@ -1,7 +1,6 @@
 ---
 title: Happy Holidays
 date: 2020-01-01
-published: true
 tags:
 - lettering
 - illustration
