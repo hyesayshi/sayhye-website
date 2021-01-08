@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import PostListItem from "./postListItem"
-import { CgCloseO } from "react-icons/cg"
+// import { CgCloseO } from "react-icons/cg"
 
 const Nav = styled.nav`
   padding: 12px; // margin doesn't work. (b/c of scroll)
@@ -14,41 +14,28 @@ const Nav = styled.nav`
 
   overflow-x: hidden;
   overflow-y: auto;
+  
+  // animation: fade-in 0.3s forwards;
 
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 1.4;
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
   ${({ menuBackground }) => css`background: ${menuBackground};`}
 
   // transition: background 10s; //----------- bg transition
-
-  // phone
-  @media (min-width: 360px) {
-    font-size: 2.8rem;
-  }
-
-  // ipad
-  @media (min-width: 768px) {
-    font-size: 4.8rem;
-  }
-
-  // desktop
-  @media (min-width: 1024px) {
-    font-size: 6.4rem;
-  }
 `
-const StyledCloseButton = styled(CgCloseO)`
-  position: fixed;
-  transform: translate(-50%, -50%); // center it
-  left: 50%;
-  bottom: -100px;
-  transition: bottom 0.2s;
-  bottom: 1%;
+// const StyledCloseButton = styled(CgCloseO)`
+//   position: fixed;
+//   transform: translate(-50%, -50%); // center it
+//   left: 50%;
+//   bottom: -100px;
+//   transition: bottom 0.2s;
+//   bottom: 1%;
 
-  font-size: 6rem;
-`
+//   font-size: 6rem;
+// `
 
 const PostList = props => {
   const data = useStaticQuery(graphql`

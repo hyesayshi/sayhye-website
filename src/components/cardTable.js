@@ -37,8 +37,12 @@ const CardTable = props => {
   }, [scrollY])
 
   return (
-    <>
-      {/* post content card */}
+    <div style={{
+      position: `absolute`,
+      top: 0,
+      left: 0,
+    }}>
+      {/* description card */}
       <Card
         windowWidth={windowWidth}
         windowHeight={windowHeight}
@@ -63,12 +67,15 @@ const CardTable = props => {
             index={index + 2} // desc card index 1 + 1 = 2, otherwise, can't select menu below.
             numCards={nodes.length + 1}
             maxZIndex={maxZIndex}
-            updateMaxZIndex={() => setMaxZIndex(prevMaxZIndex => prevMaxZIndex + 1)}
+            updateMaxZIndex={() =>
+              setMaxZIndex(prevMaxZIndex => prevMaxZIndex + 1)
+            }
             cardBorder={cardBorder ? cardBorder : "black"}
+            post={post}
           />
         )
       })}
-    </>
+    </div>
   )
 }
 

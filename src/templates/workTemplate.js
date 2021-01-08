@@ -9,7 +9,7 @@ const WorkTemplate = ({ location, data }) => {
 
   return (
     <>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={`${post.frontmatter.title} | SAYHYE.NET`} isPost />
       <CardTable post={post} nodes={nodes} />
     </>
   )
@@ -19,6 +19,11 @@ export default WorkTemplate
 
 export const pageQuery = graphql`
   query($slug: String!, $slugNoSlash: String!) {
+    site {
+      siteMetadata {
+        defaultBackground
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -37,7 +42,7 @@ export const pageQuery = graphql`
     }
     allFile(
       filter: {
-        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)|(gif)/" }
+        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
         relativeDirectory: { eq: $slugNoSlash }
       }
       sort: { fields: name, order: DESC }
@@ -45,8 +50,9 @@ export const pageQuery = graphql`
       nodes {
         id
         publicURL
+        name
         childImageSharp {
-          fluid(maxWidth: 800, quality: 50) {
+          fluid(maxWidth: 1400, quality: 60) {
             aspectRatio
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }

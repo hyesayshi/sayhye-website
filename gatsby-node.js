@@ -8,12 +8,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({ node, getNode })
     console.log(slug)
     // console.log(slug.replace(/^\/|\/$/g, "")) // remove first/last slahes
-    console.log(slug.replace(/\/$/g, "")) // remove trailing(last) slash
+    // console.log(slug.replace(/\/$/g, "")) // remove trailing(last) slash
 
     createNodeField({
       node,
       name: "slug",
-      value: slug.replace(/\/$/g, ""),
+      value: slug,
     })
   }
 }

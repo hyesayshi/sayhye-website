@@ -3,6 +3,7 @@
 
 import React from "react";
 import Layout from "./src/components/layout";
+import "./static/reset.css"
 
 // // https://github.com/gatsbyjs/gatsby/issues/4452#issuecomment-403456868
 export const wrapPageElement = ({ element, props }) => {

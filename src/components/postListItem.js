@@ -8,8 +8,9 @@ import { CgCloseO } from "react-icons/cg"
 
 const ListItemBox = styled.div`
   // outline: 1px solid red;
-  margin: 4px 6px;
-  padding: 0px 8px;
+
+  // margin: 4px;
+  padding: 0px 6px;
   border-radius: min(2vw, 2vh);
 
   position: relative;
@@ -24,7 +25,14 @@ const ListItemBox = styled.div`
   white-space: nowrap;
   overflow: hidden;
 
-  li {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.4;
+
+  div {
+    // outline: 1px solid red;
+    margin: 4px 0;
+
     a {
       color: ${props => `${props.menuText}`};
     }
@@ -35,16 +43,31 @@ const ListItemBox = styled.div`
     }
   }
 
+  // // phone
+  // @media (min-width: 360px) {
+  //   font-size: 2.8rem;
+  // }
+
+  // ipad
+  @media (min-width: 768px) {
+    font-size: 3.6rem;
+  }
+
+  // desktop
+  @media (min-width: 1024px) {
+    font-size: 4.8rem;
+  }
+
   ${props =>
     props.canDrag &&
     css`
       font-style: italic;
       // font-weight: 700;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       background: ${props.menuText}; //----- invert color
       transform: rotate(-3deg);
 
-      li {
+      div {
         a {
           color: ${props.menuBackground}; //----- invert color
         }
@@ -53,64 +76,31 @@ const ListItemBox = styled.div`
   ${({ animatable }) =>
     animatable &&
     css`
-      transition: transform 0.3s; //----- return back transition
+      transition: transform 0.2s; //----- return back transition
     `}
 
   &:hover {
-    li a svg {
+    div a svg {
       left: -8px;
     }
-  }
-
-  // tablet
-  @media (min-width: 768px) {
-    margin-right: 3rem;
   }
 `
 const handCSS = css`
   margin: 0 12px;
   position: relative;
-  font-size: 1.8rem;
-
-  // phone
-  @media (min-width: 360px) {
-    font-size: 2.4rem;
-  }
-  // ipad
-  @media (min-width: 768px) {
-    font-size: 3.6rem;
-  }
-  // desktop
-  @media (min-width: 1024px) {
-    font-size: 4.8rem;
-  }
+  font-size: 0.8em;
 `
-
 const closeCSS = css`
   // outline: 1px solid red;
   // margin: auto 8px auto 18px;
-  position: relative;
-  font-size: 1.8rem;
+
+  // position: relative;
 
   transform: scale(1);
-
   left: 0 !important; //----- prevent left transition
 
   &:hover {
     transform: scale(1.2);
-  }
-
-  // phone
-  @media (min-width: 360px) {
-    font-size: 2.4rem;
-  }
-  // ipad
-  @media (min-width: 768px) {
-    font-size: 3.6rem;
-  }
-  // desktop
-  @media (min-width: 1024px) {
-    font-size: 4.8rem;
   }
 `
 
@@ -118,7 +108,7 @@ const PostListItemDraggable = props => {
   const { node, index, canDrag, menuText, menuBackground } = props
 
   const [pos, setPos] = useState({ x: null, y: null })
-  const [angle, setAngle] = useState(0)
+  // const [angle, setAngle] = useState(0)
   const [zIndex, setZIndex] = useState(0)
   const [animatable, setAnimatable] = useState(true) // apply transition or not. (set false when dragging)
 
@@ -128,10 +118,10 @@ const PostListItemDraggable = props => {
     setPos({ x: 0, y: 0 })
     if (canDrag) {
       setZIndex(1)
-      setAngle(10)
+      // setAngle(10)
     } else {
       setZIndex(0)
-      setAngle(0)
+      // setAngle(0)
     }
   }, [canDrag])
 
@@ -156,7 +146,7 @@ const PostListItemDraggable = props => {
       onDrag={handleDrag}
       onStop={handleStop}
     >
-      <div
+      <li
         style={{
           position: `relative`,
           zIndex: zIndex,
@@ -170,7 +160,12 @@ const PostListItemDraggable = props => {
           menuText={menuText}
           menuBackground={menuBackground}
         >
-          <li>
+          <div
+            style={{
+              // outline: `1px solid red`,
+              display: `flex`,
+            }}
+          >
             <Link
               to={node.fields.slug}
               state={{ disableScrollUpdate: true }}
@@ -185,18 +180,19 @@ const PostListItemDraggable = props => {
                 state={{ disableScrollUpdate: true }}
                 draggable={false}
                 style={{
-                  // outline: `1px solid red`,
-                  margin: `auto 0 auto 8px`,
-                  padding: 6,
-                  overflow: `hidden`,
+                  // outline: `1px solid blue`,
+                  margin: `auto 0 auto 12px`,
+                  display: `inline-flex`,
+                  justifyContent: `center`,
+                  alignItems: `center`,
                 }}
               >
                 <CgCloseO css={closeCSS} style={{ color: menuBackground }} />
               </Link>
             )}
-          </li>
+          </div>
         </ListItemBox>
-      </div>
+      </li>
     </Draggable>
   )
 }

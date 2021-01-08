@@ -40,11 +40,6 @@ const headerCSS = css`
     padding: 36px 24px;
     font-size: 4rem;
   }
-
-  // desktop
-  @media (min-width: 1024px) {
-    font-size: 4.8rem;
-  }
 `
 const aboutCSS = css`
   font-size: 1.8rem;
@@ -60,10 +55,6 @@ const aboutCSS = css`
     font-size: 3.6rem;
   }
 
-  // desktop
-  @media (min-width: 1024px) {
-    font-size: 4.8rem;
-  }
 `
 
 const Header = props => {
@@ -71,7 +62,7 @@ const Header = props => {
 
   const [emoji, setEmoji] = useState(null)
   useEffect(() => {
-    const emojis = ["👋", "👍", "🐘", "✨", "😀", "💩", "👀", "🙉", "🐥"]
+    const emojis = ["👋", "🐘", "✨", "😀", "💩", "👀", "🙉", "🐥"]
     setEmoji(emojis[Math.floor(Math.random() * emojis.length)])
   }, [])
 
@@ -89,7 +80,7 @@ const Header = props => {
       </h1>
       <div css={aboutCSS}>
         <Link
-          to="/about"
+          to="/about/"
           style={{
             color: menuText,
           }}
