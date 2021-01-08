@@ -6,7 +6,6 @@
 
 module.exports = {
   pathPrefix: `/sayhye`,
-  // assetPrefix: `/sayhye`,
   siteMetadata: {
     title: "SAY HYE",
     titleTemplate: ``,
