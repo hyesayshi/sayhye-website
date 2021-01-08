@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{RXBc:function(t,n,e){"use strict";e.r(n),e.d(n,"pageQuery",(function(){return u}));e("q1tI");var c=e("vrFN"),r=e("AeFk");n.default=function(t){t.data;return Object(r.c)("div",null,Object(r.c)(c.a,{title:"SAYHYE.NET"}))};var u="3013550935"}}]);
+//# sourceMappingURL=component---src-pages-index-js-c1e6dad3fefc36ba9e3a.js.map
