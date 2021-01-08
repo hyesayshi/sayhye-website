@@ -8,7 +8,7 @@ tags:
 thumbnail: ./01.jpg
 menuBackground: "#effa11"
 menuText: black
-cardBorder: black
-cardBackground: white
-cardText: black
+cardBorder: magenta
+cardBackground: black
+cardText: magenta
 ---
