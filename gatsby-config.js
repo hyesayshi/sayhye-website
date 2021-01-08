@@ -69,8 +69,7 @@ const cfg = {
   ],
 }
 
-// https://www.chaseadams.io/posts/gatsby-drafts/
-if (process.env.CONTEXT !== "production") {
+if (process.env.NODE_ENV !== "production") {
   console.log("----------Development mode: adding drafts to preview.")
   const draftsCfg = {
     resolve: `gatsby-source-filesystem`,
@@ -80,6 +79,8 @@ if (process.env.CONTEXT !== "production") {
     },
   }
   cfg.plugins.push(draftsCfg)
+} else {
+  console.log("----------Production mode: drafts are ignored.")
 }
 
 module.exports = cfg
