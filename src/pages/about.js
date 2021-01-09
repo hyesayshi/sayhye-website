@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import SEO from "../components/seo"
 
 const Page = styled.div`
@@ -106,13 +107,13 @@ const AboutPage = props => {
         <ul>
           <li>
             Web dev by{" "}
-            <a
+            <OutboundLink
               href="https://paperdove.com"
               target="_blank"
               rel="noreferrer"
             >
               paperdove.com
-            </a>
+            </OutboundLink>
           </li>
           <li>
             <Link to="/license/">Copyrights & License Notices</Link>
