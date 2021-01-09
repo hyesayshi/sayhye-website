@@ -27,7 +27,7 @@ const BoxWrapper = styled.div`
       scale(${props.scale});
   `}
 `
-const Box = styled.article`
+const Box = styled.div`
   // outline: 1px solid red;
   // background-color: orange;
   box-sizing: content-box;
