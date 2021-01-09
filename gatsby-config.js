@@ -71,6 +71,10 @@ const cfg = {
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-186944902-1",
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
       },
     },
   ],
