@@ -5,13 +5,13 @@ import { StaticQuery, graphql } from "gatsby"
 const SEO = ({ title, description, image, path, isPost }) => (
   <StaticQuery
     query={query}
-    render={({ site: { siteMetadata } }) => {
+    render={({ site: { siteMetadata }, allFile }) => {
       const seo = {
         title: title || siteMetadata.title,
         titleTemplate: siteMetadata.titleTemplate || "",
         description: description || siteMetadata.tagline,
         url: `${siteMetadata.siteUrl}${path || ""}`,
-        image: `${siteMetadata.siteUrl}${image}` || ""
+        image: image ? `${siteMetadata.siteUrl}${image}` : `${siteMetadata.siteUrl}${allFile.nodes[0].publicURL}`,
       }
       return (
         <Helmet
@@ -66,6 +66,12 @@ const query = graphql`
         titleTemplate
         siteUrl
         tagline
+      }
+    }
+    allFile(sort: { fields: changeTime, order: DESC }, limit: 1) {
+      nodes {
+        publicURL
+        name
       }
     }
   }

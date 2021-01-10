@@ -7,15 +7,13 @@ const WorkTemplate = ({ location, data }) => {
   const post = data.markdownRemark
   const nodes = data.allFile.nodes
 
-  console.log(nodes[0].publicURL)
-
   return (
     <>
       <SEO
-        title={`${post.frontmatter.title} | SAYHYE.NET`}
+        title={`${post.frontmatter.title} ✨ SAYHYE.NET`}
         description={post.excerpt}
         path={post.fields.slug}
-        image={nodes[0].publicURL}
+        image={nodes[nodes.length - 1].publicURL}
         isPost
       />
       <CardTable post={post} nodes={nodes} />
