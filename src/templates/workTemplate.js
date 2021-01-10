@@ -7,9 +7,17 @@ const WorkTemplate = ({ location, data }) => {
   const post = data.markdownRemark
   const nodes = data.allFile.nodes
 
+  console.log(nodes[0].publicURL)
+
   return (
     <>
-      <SEO title={`${post.frontmatter.title} | SAYHYE.NET`} isPost />
+      <SEO
+        title={`${post.frontmatter.title} | SAYHYE.NET`}
+        description={post.excerpt}
+        path={post.fields.slug}
+        image={nodes[0].publicURL}
+        isPost
+      />
       <CardTable post={post} nodes={nodes} />
     </>
   )
@@ -26,6 +34,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         title
         date

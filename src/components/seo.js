@@ -10,7 +10,8 @@ const SEO = ({ title, description, image, path, isPost }) => (
         title: title || siteMetadata.title,
         titleTemplate: siteMetadata.titleTemplate || "",
         description: description || siteMetadata.tagline,
-        url: `${siteMetadata.siteUrl}/${path || ""}`,
+        url: `${siteMetadata.siteUrl}${path || ""}`,
+        image: `${siteMetadata.siteUrl}${image}` || ""
       }
       return (
         <Helmet
